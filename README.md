@@ -6,6 +6,6 @@ Open sourced LSL code of little projects in Second Life:
 
 ⦾ animeshcycle.txt = A fun improvement scripting excercise in reducing bitcode where an animesh object can cycle through all it's animations.
 
-⦾ sniffy.txt = listen to a channel for any message that might pass by, define the channel in a text dialog. Ideal as a debug HUD, also on marketplace as "Sniffy HUD".
+⦾ sniffy.txt = listen to a channel for any message that might pass by, define the channel in a text dialog. Ideal for debug.
 
 More to follow, who knows.
