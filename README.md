@@ -8,4 +8,4 @@ Open sourced LSL code of little projects in Second Life:
 
 ⦾ sniffy.txt = listen to a channel for any message that might pass by, define the channel in a text dialog. Ideal for debug.
 
-More to follow, who knows.
+More to follow, who knows - find these and other products at https://marketplace.secondlife.com/stores/81890
