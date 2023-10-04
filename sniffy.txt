@@ -5,10 +5,8 @@ integer oldchan;
 integer eavesdrop;
 integer textbox;
 
-default
-{
-    state_entry()
-    {   
+default {
+    state_entry() {   
         llPassTouches(PASS_NEVER);
         owner = llGetOwner();
         username = llGetUsername(owner);
@@ -19,19 +17,14 @@ default
         llInstantMessage(owner, "Turning on, listening to channel "+(string)chan);
         eavesdrop = llListen(chan,"","","");
     }
-
-    touch_start(integer lol)
-    {
+    touch_start(integer lol) {
         if (llDetectedKey(0) == owner){
             if (llGetObjectName() == "" || llGetObjectName() == "Object" || llGetObjectName() == "Sniffy HUD") llSetObjectName(username+"'s sniffy");
             llListenRemove(eavesdrop);
             textbox = llListen(-90772,"","","");
             llTextBox(owner,"\n \n \nType numbers of channel to listen to & click submit,\n numbers can be negative.",-90772);
-        }
-    }
-
-    listen( integer channel, string name, key id, string message )
-    {
+        }}
+    listen( integer channel, string name, key id, string message ) {
         if (message) {
             if (id == owner && -90772) {
                 llListenRemove(textbox);
@@ -43,15 +36,11 @@ default
                 else if (oldchan == 0) {
                     llSay(0,"[https://marketplace.secondlife.com/stores/81890 Sniffy] has now stopped listening to public chat.");
                     oldchan = chan;
-                }
-        }
+                }}
             else
                 llInstantMessage(owner,message);         
-        }
-    }
-
-    state_exit()
-    {
+        }}
+    state_exit() {
         llInstantMessage(owner, "Turning off, see you next time, "+username+"!");
     }
 }
